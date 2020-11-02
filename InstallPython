@@ -1,0 +1,14 @@
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew install pipenv
+pipenv install jupyterlab
+
+#pip
+sudo easy_install pip
+Download python & install
+python3 --version
+pip install jupyterlab
+pip install jupyter
+pip3 install jupyter
+export PATH="$HOME/.local/bin:$PATH"
+jupyter notebook
+
