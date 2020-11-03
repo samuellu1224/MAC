@@ -1,4 +1,176 @@
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+# 下載node,js
+$ curl https://nodejs.org/en/
+# 確認 PATH
+# Node.js v14.15.0 to /usr/local/bin/node
+# 	•	npm v6.14.8 to /usr/local/bin/npm
+# Make sure that /usr/local/bin is in your $PATH.
+
+$ curl https://www.npmjs.com/get-npm
+# chck version
+$ node -v
+$ npm -v
+# Upgrade node
+$ sudo npm install npm@latest -g
+
+$ curl https://webdriver.io/docs/gettingstarted.html
+$  mkdir webdriverio-test && cd webdriverio-test
+$  npm init -y
+# 
+# Wrote to /Users/samuel/webdriverio-test/package.json:
+# 
+# {
+#   "name": "webdriverio-test",
+#   "version": "1.0.0",
+#   "description": "",
+#   "main": "index.js",
+#   "scripts": {
+#     "test": "echo \"Error: no test specified\" && exit 1"
+#   },
+#   "keywords": [],
+#   "author": "",
+#   "license": "ISC"
+# }
+
+$ npm i --save-dev @wdio/cli
+# npm notice created a lockfile as package-lock.json. You should commit this file.
+# npm WARN webdriverio-test@1.0.0 No description
+# npm WARN webdriverio-test@1.0.0 No repository field.
+#  
+# + @wdio/cli@6.7.2
+# added 280 packages from 299 contributors and audited 280 packages in 22.872s#
+# 
+# 27 packages are looking for funding
+#   run `npm fund` for details
+# 
+# found 0 vulnerabilities
+ 
+$ npx wdio config -y
+# 
+# =========================
+# WDIO Configuration Helper
+# =========================
+# 
+# 
+# Installing wdio packages:
+# - @wdio/local-runner
+# - @wdio/mocha-framework
+# - @wdio/spec-reporter
+# - wdio-chromedriver-service
+# - @wdio/sync
+# - chromedriver
+# 
+# > fibers@4.0.3 install /Users/samuel/webdriverio-test/node_modules/fibers
+# > node build.js || nodejs build.js
+# 
+#   CXX(target) Release/obj.target/fibers/src/fibers.o
+#   CXX(target) Release/obj.target/fibers/src/coroutine.o
+#   CC(target) Release/obj.target/fibers/src/libcoro/coro.o
+#   SOLINK_MODULE(target) Release/fibers.node
+# Installed in `/Users/samuel/webdriverio-test/node_modules/fibers/bin/darwin-x64-83/fibers.node`
+# 
+# > chromedriver@86.0.0 install /Users/samuel/webdriverio-test/node_modules/chromedriver
+# > node install.js
+# 
+# Current existing ChromeDriver binary is unavailable, proceeding with download and extraction.
+# Downloading from file:  https://chromedriver.storage.googleapis.com/86.0.4240.22/chromedriver_mac64.zip
+# Saving to file: /var/folders/r5/d8qjjldd4qg9x77lhb444hww0000gn/T/86.0.4240.22/chromedriver/chromedriver_mac64.zip
+# Received 1040K...
+# Received 2080K...
+# Received 3120K...
+# Received 4160K...
+# Received 5200K...
+# Received 6240K...
+# Received 7280K...
+# Received 7613K total.
+# Extracting zip contents to /var/folders/r5/d8qjjldd4qg9x77lhb444hww0000gn/T/86.0.4240.22/chromedriver.
+# Copying to target path /Users/samuel/webdriverio-test/node_modules/chromedriver/lib/chromedriver
+# Fixing file permissions.
+# Done. ChromeDriver binary available at /Users/samuel/webdriverio-test/node_modules/chromedriver/lib/chromedriver/chromedriver
+# npm WARN webdriverio-test@1.0.0 No description
+# npm WARN webdriverio-test@1.0.0 No repository field.
+# 
+# + chromedriver@86.0.0
+# + wdio-chromedriver-service@6.0.4
+# + @wdio/sync@6.7.2
+# + @wdio/mocha-framework@6.7.0
+# + @wdio/local-runner@6.7.2
+# + @wdio/spec-reporter@6.7.0
+# added 147 packages from 126 contributors and audited 427 packages in 28.906s
+# 
+# 38 packages are looking for funding
+#   run `npm fund` for details
+# 
+# 
+
+$ npm install @wdio/selenium-standalone-service --save-dev
+
+# npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+# npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+# npm WARN webdriverio-test@1.0.0 No description
+# npm WARN webdriverio-test@1.0.0 No repository field.
+# 
+# + @wdio/selenium-standalone-service@6.6.5
+# added 58 packages from 70 contributors and audited 485 packages in 9.181s
+# 
+# 39 packages are looking for funding
+#   run `npm fund` for details
+# 
+# found 0 vulnerabilities
+
+$ npm install @wdio/selenium-standalone-service --save-dev
+# 
+# npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+# npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+# npm WARN webdriverio-test@1.0.0 No description
+# npm WARN webdriverio-test@1.0.0 No repository field.
+# 
+# + @wdio/selenium-standalone-service@6.6.5
+# added 58 packages from 70 contributors and audited 485 packages in 9.181s
+# 
+# 39 packages are looking for funding
+#   run `npm fund` for details
+# 
+# found 0 vulnerabilities
+
+$ sudo selenium-standalone install
+# ----------
+# selenium-standalone installation starting
+# ----------
+# 
+# ---
+# selenium install:
+# from: https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar
+# to: /usr/local/lib/node_modules/selenium-standalone/.selenium/selenium-server/3.141.59-server.jar
+# ---
+# chrome install:
+# from: https://chromedriver.storage.googleapis.com/85.0.4183.87/chromedriver_mac64.zip
+# to: /usr/local/lib/node_modules/selenium-standalone/.selenium/chromedriver/85.0.4183.87-x64-chromedriver
+# ---
+# firefox install:
+# from: https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-macos.tar.gz
+# to: /usr/local/lib/node_modules/selenium-standalone/.selenium/geckodriver/0.26.0-x64-geckodriver
+# ---
+# chromiumedge install:
+# from: https://msedgedriver.azureedge.net/86.0.600.0/edgedriver_mac64.zip
+# to: /usr/local/lib/node_modules/selenium-standalone/.selenium/chromiumedgedriver/86.0.600.0-x64-msedgedriver
+# 
+# 
+# selenium-standalone installation [==================  ] 88% 2.2s
+# 
+# -----
+# selenium-standalone installation finished
+# -----
+
+$ selenium-standalone start
+
+# 13:55:37.416 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+# 13:55:37.471 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
+# 2020-11-03 13:55:37.530:INFO::main: Logging initialized @324ms to org.seleniumhq.jetty9.util.log.StdErrLog
+# 13:55:37.718 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+# 13:55:37.807 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
+# Selenium started
+
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew install pipenv
 pipenv install jupyterlab
 
