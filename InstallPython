@@ -170,6 +170,27 @@ $ selenium-standalone start
 # 13:55:37.807 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
 # Selenium started
 
+$ pip3 install virtualenv
+# Collecting virtualenv
+#   Downloading virtualenv-20.1.0-py2.py3-none-any.whl (4.9 MB)
+#      |████████████████████████████████| 4.9 MB 3.8 MB/s 
+# Collecting filelock<4,>=3.0.0
+#   Downloading filelock-3.0.12-py3-none-any.whl (7.6 kB)
+# Requirement already satisfied: six<2,>=1.9.0 in ./Library/Python/3.9/lib/python/site-packages (from virtualenv) (1.15.0)
+# Collecting distlib<1,>=0.3.1
+#   Downloading distlib-0.3.1-py2.py3-none-any.whl (335 kB)
+#      |████████████████████████████████| 335 kB 4.2 MB/s 
+# Collecting appdirs<2,>=1.4.3
+#   Downloading appdirs-1.4.4-py2.py3-none-any.whl (9.6 kB)
+# Installing collected packages: filelock, distlib, appdirs, virtualenv
+# Successfully installed appdirs-1.4.4 distlib-0.3.1 filelock-3.0.12 virtualenv-20.1.0
+# #建立目錄(如果已經有目標資料夾可略過)
+#  $ mkdir <target_folder_name>
+# #將虛擬環境設置在目標資料夾中
+#  $ sudo virtualenv -p python3 <target_folder_name>
+# #啟動虛擬環境 
+#  $ source <target_folder_name>/bin/activate
+
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew install pipenv
 pipenv install jupyterlab
